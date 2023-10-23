@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "lambda-rie-boilerplate"
+version = "0.1.0"
+description = ""
+authors = ["Kamil Błaż <blazkamil@outlook.com>"]
+readme = "README.md"
+packages = [{include = "lambda_rie_boilerplate"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
