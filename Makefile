@@ -3,7 +3,10 @@ export RUNTIME_LANG = python
 export RUNTIME_VERSION = 3.10
 export IMAGE_NAME = backend:${RUNTIME_LANG}-${RUNTIME_VERSION}
 
-.PHONY: build lambda-test
+.PHONY: lint-dockerfile build  local-lambda
+
+lint-dockerfile:
+	@hadolint docker/Dockerfile
 
 build:
 	docker-compose build \
